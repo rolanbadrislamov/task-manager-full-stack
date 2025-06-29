@@ -67,8 +67,6 @@ npm start
 
 Open your browser and navigate to `http://localhost:4200` to use the application.
 
-**Note on Frontend Dependencies:** This project uses Angular 20. While NgRx does not have official support for Angular 20 at the time of this writing, it has been tested and works correctly. The `npm i --legacy-peer-deps` command is used to bypass peer dependency conflicts during installation. For more details, you can refer to the discussion on the [NgRx GitHub repository](https://github.com/ngrx/platform/issues/4787).
-
 ## Running Unit Tests
 
 You can run the unit tests for both the backend and frontend to ensure everything is working as expected.
