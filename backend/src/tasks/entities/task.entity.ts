@@ -36,7 +36,7 @@ export class Task {
     nullable: true
   })
   @Column({ type: 'text', nullable: true })
-  description: string;
+  description?: string;
 
   @ApiProperty({
     description: 'Current task status',
@@ -56,7 +56,7 @@ export class Task {
     nullable: true
   })
   @Column({ type: 'text', nullable: true })
-  aiNote: string;
+  aiNote?: string;
 
   @ApiProperty({
     description: 'Task creation timestamp',
