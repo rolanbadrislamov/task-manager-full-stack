@@ -33,7 +33,7 @@ export class QueryTaskDto {
   @IsInt()
   @Min(1)
   @Max(100)
-  limit?: number = 5;
+  limit?: number;
 
   @ApiPropertyOptional({
     description: 'Page number',
@@ -45,7 +45,7 @@ export class QueryTaskDto {
   @Type(() => Number)
   @IsInt()
   @Min(1)
-  page?: number = 1;
+  page?: number;
 
   @ApiPropertyOptional({
     description: 'Field to sort by',
@@ -55,7 +55,7 @@ export class QueryTaskDto {
   })
   @IsOptional()
   @IsString()
-  sortBy?: string = 'createdAt';
+  sortBy?: string;
 
   @ApiPropertyOptional({
     description: 'Sort order',
@@ -65,5 +65,5 @@ export class QueryTaskDto {
   })
   @IsOptional()
   @IsEnum(['ASC', 'DESC'])
-  sortOrder?: 'ASC' | 'DESC' = 'DESC';
+  sortOrder?: 'ASC' | 'DESC';
 }

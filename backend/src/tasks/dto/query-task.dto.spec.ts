@@ -184,10 +184,10 @@ describe('QueryTaskDto', () => {
 
       expect(queryTaskDto.status).toBeUndefined();
       expect(queryTaskDto.search).toBeUndefined();
-      expect(queryTaskDto.page).toBe(1);
-      expect(queryTaskDto.limit).toBe(5);
-      expect(queryTaskDto.sortBy).toBe('createdAt');
-      expect(queryTaskDto.sortOrder).toBe('DESC');
+      expect(queryTaskDto.page).toBeUndefined();
+      expect(queryTaskDto.limit).toBeUndefined();
+      expect(queryTaskDto.sortBy).toBeUndefined();
+      expect(queryTaskDto.sortOrder).toBeUndefined();
     });
   });
 
@@ -247,13 +247,13 @@ describe('QueryTaskDto', () => {
   });
 
   describe('default values', () => {
-    it('should have correct default values when not provided', () => {
+    it('should have no default values when not provided', () => {
       const queryTaskDto = new QueryTaskDto();
 
-      expect(queryTaskDto.page).toBe(1);
-      expect(queryTaskDto.limit).toBe(5);
-      expect(queryTaskDto.sortBy).toBe('createdAt');
-      expect(queryTaskDto.sortOrder).toBe('DESC');
+      expect(queryTaskDto.page).toBeUndefined();
+      expect(queryTaskDto.limit).toBeUndefined();
+      expect(queryTaskDto.sortBy).toBeUndefined();
+      expect(queryTaskDto.sortOrder).toBeUndefined();
     });
   });
 }); 
