@@ -59,7 +59,7 @@ The backend API will be available at `http://localhost:3000`.
 cd frontend
 
 # Install dependencies
-npm i --legacy-peer-deps
+npm istall
 
 # Start the frontend development server
 npm start
