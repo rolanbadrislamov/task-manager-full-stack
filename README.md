@@ -1,1 +1,2 @@
-# task-manager-full-stack
+# Full SStack Task Manager With Example AI Notes
+
