@@ -141,11 +141,6 @@ import { TaskStatus } from '../../models/task.model';
                   <mat-icon>list</mat-icon>
                   Back to Tasks
                 </button>
-                
-                <button mat-raised-button color="primary" (click)="editTask(task.id)">
-                  <mat-icon>edit</mat-icon>
-                  Edit Task
-                </button>
               </div>
             </mat-card-content>
           </mat-card>
