@@ -28,7 +28,6 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('Task Manager API')
     .setDescription('A comprehensive Task Manager API with AI note generation, pagination, and filtering capabilities')
-    .setVersion('1.0')
     .addTag('tasks', 'Task management operations')
     .build();
   const document = SwaggerModule.createDocument(app, config);
