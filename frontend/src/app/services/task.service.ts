@@ -41,9 +41,6 @@ export class TaskService {
       httpParams = httpParams.set('sortOrder', params.sortOrder);
     }
 
-    console.log('API Request params:', params);
-    console.log('HTTP params:', httpParams.toString());
-
     return this.http.get<TaskResponse>(this.apiUrl, { params: httpParams })
       .pipe(
         retry(3),
@@ -51,7 +48,6 @@ export class TaskService {
       )
       .pipe(
         map(response => {
-          console.log('API Response:', response);
           return response;
         })
       );

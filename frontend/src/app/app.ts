@@ -44,10 +44,8 @@ export class AppComponent implements OnInit {
   title = 'Task Manager';
 
   constructor() {
-    console.log('🚀 AppComponent constructor called');
   }
 
   ngOnInit() {
-    console.log('🚀 AppComponent ngOnInit called');
   }
 }
