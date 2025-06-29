@@ -5,7 +5,6 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil, debounceTime, distinctUntilChanged } from 'rxjs';
 
-// Material Imports
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,7 +19,6 @@ import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-// Store imports
 import * as TaskActions from '../../store/task.actions';
 import * as TaskSelectors from '../../store/task.selectors';
 import { TaskStatus, TaskQueryParams } from '../../models/task.model';
@@ -451,7 +449,6 @@ export class TaskListComponent implements OnInit, OnDestroy {
   }
 
   private setupFilters(): void {
-    // Search filter with debounce
     this.searchControl.valueChanges.pipe(
       takeUntil(this.destroy$),
       debounceTime(300),
@@ -460,14 +457,12 @@ export class TaskListComponent implements OnInit, OnDestroy {
       this.updateFilters({ search: search || undefined });
     });
 
-    // Status filter
     this.statusControl.valueChanges.pipe(
       takeUntil(this.destroy$)
     ).subscribe(status => {
       this.updateFilters({ status: status as TaskStatus || undefined });
     });
 
-    // Sort filters
     this.sortByControl.valueChanges.pipe(
       takeUntil(this.destroy$)
     ).subscribe(sortBy => {

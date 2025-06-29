@@ -5,7 +5,6 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil, filter } from 'rxjs';
 
-// Material Imports
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,7 +14,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-// Store imports
 import * as TaskActions from '../../store/task.actions';
 import * as TaskSelectors from '../../store/task.selectors';
 import { TaskStatus, CreateTaskRequest, UpdateTaskRequest } from '../../models/task.model';
@@ -107,7 +105,6 @@ import { TaskStatus, CreateTaskRequest, UpdateTaskRequest } from '../../models/t
         </mat-card-content>
       </mat-card>
 
-      <!-- Loading Overlay -->
       <div class="loading-overlay" *ngIf="loading$ | async">
         <mat-spinner></mat-spinner>
         <p>{{ isEditMode ? 'Updating task...' : 'Creating task...' }}</p>
@@ -289,7 +286,6 @@ export class TaskFormComponent implements OnInit, OnDestroy {
         this.store.dispatch(TaskActions.createTask({ task: createData }));
       }
 
-      // Navigate back after successful operation
       this.loading$.pipe(
         takeUntil(this.destroy$),
         filter(loading => !loading)
